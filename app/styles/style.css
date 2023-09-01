@@ -8,6 +8,7 @@
     --black_100: #0000001a;
     --textColor: #000000a1;
     --redColor: #d14444e3;
+    --greenColor: #316a31;
 }
 
 body {
@@ -16,13 +17,13 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 10px;               
+    width: 10px;
 }
-  
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: var(--redColor);    
-  }
+
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--redColor);
+}
 
 header {
     display: flex;
@@ -50,7 +51,7 @@ header {
     background-repeat: no-repeat;
 }
 
-.headerInfos .search{
+.headerInfos .search {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -62,7 +63,7 @@ header {
 
 }
 
-.headerInfos .search input{
+.headerInfos .search input {
     outline: none;
     width: calc(100% - 50px);
     border: none;
@@ -70,17 +71,18 @@ header {
     font-weight: bold;
 }
 
-.headerInfos .search input::placeholder{
+
+.headerInfos .search input::placeholder {
     font-weight: normal;
 }
 
-.headerInfos .search img{
+.headerInfos .search img {
     cursor: pointer;
-    
+
 }
 
 
-nav.navBar{
+nav.navBar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -91,12 +93,12 @@ nav.navBar{
     margin: 0 auto;
 }
 
-nav.navBar a{
+nav.navBar a {
     text-decoration: none;
     color: inherit;
 }
 
-nav.navBar a:hover{
+nav.navBar a:hover {
     cursor: pointer;
     color: var(--redColor);
     text-decoration: underline;
@@ -104,41 +106,47 @@ nav.navBar a:hover{
 
 
 section {
+    margin-top: 540px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     width: 60%;
     margin: 1em auto;
 }
 
-section > *{
+section>* {
     margin: .5em 0;
 }
 
-section h1{
+.mainTitle {
     text-align: center;
     color: var(--redColor);
 }
 
-@media (max-width: 620px){
-    header{
+.subTitle {
+    color: var(--redColor);
+    text-align: start;
+}
+
+@media (max-width: 620px) {
+    header {
         height: 250px;
     }
 
-    .headerInfos{
+
+    .headerInfos {
         flex-direction: column;
         margin: .5em 0;
     }
 
-    .logo{
+    .logo {
         width: 250px;
         height: 150px;
         transform: scale(1.2);
     }
 
 
-    .navBar
-    {
+    .navBar {
         margin: 1em 0;
         flex-direction: column;
         height: max-content;

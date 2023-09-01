@@ -1,0 +1,31 @@
+.copyContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    height: 30px;
+    border: 1px solid var(--textColor) ;
+    text-align: center;
+    padding-left: 1em;
+}
+
+
+.copyContainer button{
+    width: 20%;
+    height: 100%;
+    background: var(--redColor);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.success{
+    background: var(--greenColor) !important;
+
+}
+
+@media (max-width: 620px){
+    section{
+        align-items: center;
+    }
+}

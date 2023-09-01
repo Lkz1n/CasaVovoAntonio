@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/contact.css">
 </head>
 <body>
     <main>
@@ -30,9 +31,34 @@
         </header>
     </main>
     <section>
-        <h1>Contato</h1>
-        <p>Telefone: (17) 91234-5678 </p>
-        <p>Email: email@email.com</p>
+        <h1 class="mainTitle">Contato</h1>
+        <p>Entre em contato conosco através:</p>
+        <div class="copyContainer">
+            <span class="origem">Telefone:</span>
+            <span class="info"> (17) 91234-5678 </span>
+            <button>Copiar</button>
+        </div>
+        <div class="copyContainer">
+            <span class="origem">Email:</span>
+            <span class="info">email@email.com</span>
+            <button>Copiar</button>
+        </div>
+
     </section>
+    <!-- <script>
+        const $btn = document.getElementById("test")
+        const $tel = document.getElementById("tel")
+
+        $btn.addEventListener("click", () => {
+            const tel = $tel.textContent
+            try{
+                navigator.clipboard.writeText("oiiii")
+
+            } catch (err){
+                console.log(err)
+            }
+        })
+    </script> -->
+    <script src="./scripts/contato.js"></script>
 </body>
 </html>
