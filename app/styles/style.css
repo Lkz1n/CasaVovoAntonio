@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black_100: #0000001a;
+    --textColor: #000000a1;
+    --redColor: #d14444e3;
+}
+
+body {
+    font-family: sans-serif;
+    color: var(--textColor);
+}
+
+body::-webkit-scrollbar {
+    width: 10px;               
+}
+  
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--redColor);    
+  }
+
+header {
+    display: flex;
+    flex-direction: column;
+    padding: .5em 2em;
+    width: 100%;
+    height: 150px;
+    /* border-bottom: 1px solid var(--black_100); */
+    box-shadow: 0px 10px 15px var(--black_100);
+}
+
+.headerInfos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 65%;
+}
+
+.headerInfos .logo {
+    width: 110px;
+    height: 100%;
+    background-image: url(../imgs/logo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.headerInfos .search{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 300px;
+    height: 40px;
+    border: 1px solid var(--textColor);
+    border-radius: 10px;
+    padding: .5em;
+
+}
+
+.headerInfos .search input{
+    outline: none;
+    width: calc(100% - 50px);
+    border: none;
+    color: var(--textColor);
+    font-weight: bold;
+}
+
+.headerInfos .search input::placeholder{
+    font-weight: normal;
+}
+
+.headerInfos .search img{
+    cursor: pointer;
+    
+}
+
+
+nav.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    height: 30%;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+nav.navBar a{
+    text-decoration: none;
+    color: inherit;
+}
+
+nav.navBar a:hover{
+    cursor: pointer;
+    color: var(--redColor);
+    text-decoration: underline;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 1em auto;
+}
+
+section > *{
+    margin: .5em 0;
+}
+
+section h1{
+    text-align: center;
+    color: var(--redColor);
+}
+
+@media (max-width: 620px){
+    header{
+        height: 250px;
+    }
+
+    .headerInfos{
+        flex-direction: column;
+        margin: .5em 0;
+    }
+
+    .logo{
+        width: 250px;
+        height: 150px;
+        transform: scale(1.2);
+    }
+
+
+    .navBar
+    {
+        margin: 1em 0;
+        flex-direction: column;
+        height: max-content;
+    }
+}
